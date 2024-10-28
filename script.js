@@ -24,29 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Initial check on page load
 
-    // Form submission handling with EmailJS
+    // Form submission handling
     const contactForm = document.getElementById('contact-form');
-
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
-        // Retrieve form data
-        const name = contactForm.name.value;
-        const email = contactForm.email.value;
-        const message = contactForm.message.value;
-
-        // Send email using EmailJS
-        emailjs.send("service_18x8xva", "template_vtxwe8o", {
-            from_name: name,
-            from_email: email,
-            message: message
-        }).then((response) => {
-            alert('Message sent successfully!');
-            contactForm.reset();
-        }).catch((error) => {
-            alert('Failed to send message. Please try again later.');
-            console.error('EmailJS Error:', error);
-        });
+        // Here you would typically send the form data to a server
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
     });
 
     // Dynamic color theme

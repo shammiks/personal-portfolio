@@ -66,9 +66,8 @@ main {
     margin-bottom: 2rem;
     text-align: center;
     background: var(--gradient-1);
-    background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Hero Section */
@@ -89,7 +88,6 @@ main {
     font-size: 4rem;
     margin-bottom: 1rem;
     background: linear-gradient(45deg, var(--accent-1), var(--accent-2), var(--accent-3));
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -137,9 +135,9 @@ main {
 
 .profile-pic {
     width: 300px;
-    height: 400px;
-    border-radius: 30%;
-    object-fit: cover;
+    height: 390px;
+    border-radius: 50%;
+    object-fit: contain;
     border: 5px solid var(--accent-1);
     animation: float 6s ease-in-out infinite;
 }
